@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.menuBar {
+    background-color: #5599c7;
+    text-align: center;
+}
+
+.menuBar li {
+    display: inline-block;
+    width: 120px;
+    margin: 0 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.menuBar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    /* text-shadow: 1px 1px black; */
+}
+
+.active,
+.menuBar ul li:hover {
+    background-color: #73b5e0;
+    transition: all 0.8s;
+}
+
+.subMenu-1 {
+    position: absolute;
+    background-color: #5599c7;
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* 最初の状態の表示を消す */
+    display: none;
+}
+
+.menuBar li:hover .subMenu-1 {
+    display: block;
+}
+
+.menuBar li:hover .subMenu-1 ul li {
+    display: block;
+    width: 140px;
+    border-bottom: 1px dotted white;
+}
+
+.menuBar ul li:hover .subMenu-1 ul li:last-child {
+    border: none;
+}
